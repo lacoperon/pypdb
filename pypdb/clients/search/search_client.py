@@ -6,8 +6,6 @@ Python objects. This aims to completely implement the Search API in Python.
 For RCSB API docs, see: https://search.rcsb.org/index.html
 """
 
-# TODO(lacoperon): Implement request options
-
 from dataclasses import dataclass
 from enum import Enum
 import json
@@ -24,6 +22,8 @@ from pypdb.clients.search.operators.structure_operators import StructureOperator
 from pypdb.clients.search.operators.text_operators import TextSearchOperator
 
 SEARCH_URL_ENDPOINT: str = "https://search.rcsb.org/rcsbsearch/v1/query"
+
+
 """SearchOperators correspond to individual search operations.
 
 These can be used to search on their own using `perform_search`, or they can be
